@@ -55,6 +55,7 @@ def parse(String description) {
 }
 
 def on() {
+log.debug "Executing ON"
 	if (external_on_uri){
 		// sendEvent(name: "switch", value: "on")
 		 log.debug "Executing ON"
@@ -86,7 +87,7 @@ def on() {
 				)
 			sendHubCommand(result)
 			sendEvent(name: "switch", value: "on") 
-			log.debug "Executing ON" 
+			log.debug "Exed ON" 
 			log.debug result
 	}
 }
@@ -120,7 +121,7 @@ log.debug "Executing OFF"
 
 			sendHubCommand(result)
 			sendEvent(name: "switch", value: "off")
-			log.debug "Executing OFF" 
+			log.debug "Executed OFF" 
 			log.debug result
 	}
 }
